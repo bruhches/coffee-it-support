@@ -14,14 +14,40 @@ ul { list-style:none; }
 
 /* ===== VARIABLES ===== */
 :root {
-  --accent:#23a2a2;
-  --accent-dark:#23a2a2;
-  --bg:#faf9f7;
-  --card:#ffffff;
-  --text:#2c2c2c;
-  --text-light:#7a7a7a;
-  --shadow:0 4px 24px rgba(0,0,0,.08);
-  --radius:12px;
+  /* ===== COFFEE IT SUPPORT - PALETA DA MARCA ===== */
+
+  /* Cores principais da logo */
+  --brand-pink: #d414c8;
+  --brand-purple: #8b2be2;
+  --brand-blue: #2457e6;
+
+  /* Cor principal da interface */
+  --accent: #8b2be2;
+  --accent-dark: #6620b8;
+
+  /* Fundos */
+  --bg: #faf9f7;
+  --bg-alt: #f3eef7;
+  --card: #ffffff;
+
+  /* Textos */
+  --text: #2c2c2c;
+  --text-light: #7a7a7a;
+
+  /* Outros */
+  --shadow: 0 4px 24px rgba(0,0,0,.08);
+  --radius: 12px;
+
+  /* Gradiente oficial da marca */
+  --brand-gradient: linear-gradient(
+    90deg,
+    #d414c8 0%,
+    #8b2be2 50%,
+    #2457e6 100%
+  );
+
+  /* WhatsApp */
+  --whatsapp: #25D366;
 }
 
 /* ===== NAVBAR ===== */
@@ -79,7 +105,12 @@ ul { list-style:none; }
   line-height:1.15;
   color:var(--text);
 }
-.hero h1 span { color:var(--accent); }
+.hero h1 span {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .hero p {
   margin-top:1.2rem;
   font-size:1.1rem;
@@ -97,14 +128,48 @@ ul { list-style:none; }
   transition:all .3s;
 }
 .btn-primary {
-  background:var(--accent); color:#ffffff;
-  box-shadow:0 4px 16px rgba(200,149,108,.35);
+  background: var(--brand-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(139, 43, 226, .25);
+  transition: transform .3s, box-shadow .3s, filter .3s;
 }
-.btn-primary:hover { background:var(--accent-dark); transform:translateY(-2px); }
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 43, 226, .35);
+  filter: brightness(1.08);
+}
 .btn-outline {
-  border:2px solid var(--accent); color:var(--accent-dark);
+  position: relative;
+  border: 2px solid transparent;
+  color: var(--brand-purple);
+
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--brand-gradient) border-box;
+
+  background-clip: padding-box, border-box;
+  border-radius: 50px;
+
+  transition:
+    transform .3s,
+    box-shadow .3s,
+    color .3s,
+    filter .3s;
 }
-.btn-outline:hover { background:var(--accent); color:#fff; }
+
+.btn-outline:hover {
+  color: #fff;
+
+  /* Mantém as duas camadas para evitar artefato nos cantos */
+  background:
+    var(--brand-gradient) padding-box,
+    var(--brand-gradient) border-box;
+
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 43, 226, .25);
+  filter: brightness(1.05);
+}
 
 /* ===== SECTION TITLE ===== */
 .section {
@@ -122,8 +187,11 @@ ul { list-style:none; }
   color:var(--text-light); margin-top:.5rem; font-size:1rem;
 }
 .section-title .line {
-  width:50px; height:3px; border-radius:4px;
-  background:var(--accent); margin:1rem auto 0;
+  width:50px;
+  height:3px;
+  border-radius:4px;
+  background: var(--brand-gradient);
+  margin:1rem auto 0;
 }
 
 /* ===== PRODUCT GRID ===== */
@@ -159,7 +227,7 @@ ul { list-style:none; }
 .product-card:hover .product-img img { transform:scale(1.06); }
 .product-badge {
   position:absolute; top:.75rem; left:.75rem;
-  background:var(--accent); color:#fff;
+  background: var(--brand-gradient); color:#fff;
   font-size:.7rem; font-weight:700; text-transform:uppercase;
   padding:.25rem .7rem; border-radius:50px;
 }
@@ -171,7 +239,9 @@ ul { list-style:none; }
   padding:0 1.4rem 1.4rem;
 }
 .price {
-  font-size:1.2rem; font-weight:700; color:var(--accent-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-blue);
 }
 .price .old {
   font-size:.8rem; font-weight:400; color:#bbb;
