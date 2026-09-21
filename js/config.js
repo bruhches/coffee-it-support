@@ -18,7 +18,7 @@ const CONFIG = {
   products: [
     {
       name: 'Troca de Peças',
-      desc: 'Conjunto completo de skincare com ingredientes naturais selecionados.',
+      desc: 'Diagnóstico e substituição de componentes para recuperar o desempenho e prolongar a vida útil do seu equipamento.',
       price: 189.90,
       oldPrice: null,
       badge: '',
@@ -26,7 +26,7 @@ const CONFIG = {
     },
     {
       name: 'Montagem de PC',
-      desc: 'Sérum facial antioxidante com 20% de Vitamina C pura.',
+      desc: 'Montagem personalizada de computadores, com instalação, organização e configuração dos componentes conforme sua necessidade.',
       price: 129.90,
       oldPrice: null,
       badge: '',
@@ -34,7 +34,7 @@ const CONFIG = {
     },
     {
       name: 'Formatação e Backup',
-      desc: 'Hidratação profunda para peles secas e sensíveis, 24h de ação.',
+      desc: 'Formatação, instalação e configuração do sistema, com opção de backup para preservar seus arquivos importantes.',
       price: 79.90,
       oldPrice: null,
       badge: '',
@@ -42,7 +42,7 @@ const CONFIG = {
     },
     {
       name: 'Configuração de Impressora',
-      desc: 'Máscara de argila branca purificante com carvão ativado.',
+      desc: 'Instalação e configuração de impressoras locais ou em rede para residências e empresas.',
       price: 49.90,
       oldPrice: null,
       badge: '',
@@ -50,7 +50,7 @@ const CONFIG = {
     },
     {
       name: 'Planejamento de Casa Inteligente',
-      desc: 'Óleo seco com partículas douradas, hidrata e perfuma a pele.',
+      desc: 'Planejamento e configuração de automações para iluminação, tomadas, sensores, assistentes virtuais e outros dispositivos inteligentes.',
       price: 69.90,
       oldPrice: null,
       badge: '',
@@ -58,7 +58,7 @@ const CONFIG = {
     },
     {
       name: 'Instalação e configuração de Roteadores',
-      desc: 'Proteção solar com toque seco, invisível e anti-idade.',
+      desc: 'Instalação, configuração e otimização de redes Wi-Fi para melhorar cobertura, estabilidade, desempenho e segurança.',
       price: 59.90,
       oldPrice: null,
       badge: '',
@@ -66,7 +66,7 @@ const CONFIG = {
     },
     {
       name: 'Consutoria para Empresas',
-      desc: 'Limpeza facial suave sem necessidade de enxágue.',
+      desc: 'Análise do ambiente de TI e planejamento de soluções em infraestrutura, redes, segurança, cloud e otimização tecnológica.',
       price: 39.90,
       oldPrice: null,
       badge: '',
@@ -74,7 +74,7 @@ const CONFIG = {
     },
     {
       name: 'CFTV PF ou PJ',
-      desc: 'Esfoliação e hidratação labial com manteiga de karité.',
+      desc: 'Instalação e configuração de sistemas de câmeras para monitoramento e segurança de residências e empresas.',
       price: 29.90,
       oldPrice: null,
       badge: '',
