@@ -39,9 +39,16 @@ ul { list-style:none; }
   height:64px;
 }
 .logo {
-  font-family:'Playfair Display',serif;
-  font-size:1.5rem; font-weight:700;
-  color:var(--accent-dark);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 .nav-links { display:flex; gap:2rem; }
 .nav-links a {
