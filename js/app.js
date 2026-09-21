@@ -61,8 +61,8 @@ function renderInstagram() {
   document.querySelectorAll('.ig-header a, .footer-col a[href*="instagram"]').forEach(a => {
     a.href = `https://instagram.com/${CONFIG.instagramUser}`;
   });
-  const igTitle = document.querySelector('.ig-header h2');
-  if (igTitle) igTitle.textContent = `@${CONFIG.instagramUser}`;
+  const igUsername = document.querySelector('.ig-username');
+  if (igUsername) igUsername.textContent = `@${CONFIG.instagramUser}`;
 }
 
 /* ----- Modal ----- */
