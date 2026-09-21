@@ -201,7 +201,7 @@ async function fetchInstagram() {
 /* ----- Inicialização ----- */
 function init() {
   /* Atualiza nome da marca na navbar e footer */
-  document.querySelectorAll('.logo').forEach(el => el.textContent = CONFIG.brandName);
+  
 
   renderProducts();
   renderInstagram();
