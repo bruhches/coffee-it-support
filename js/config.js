@@ -19,7 +19,7 @@ const CONFIG = {
     {
       name: 'Troca de Peças',
       desc: 'Diagnóstico e substituição de componentes para recuperar o desempenho e prolongar a vida útil do seu equipamento.',
-      price: 189.90,
+      price: 100 + valor da peça,
       oldPrice: null,
       badge: '',
       img: 'img/trade.png'
