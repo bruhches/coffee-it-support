@@ -140,7 +140,7 @@ ul { list-style:none; }
 }
 .product-img img {
   width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: contain;
   object-position: center;
 }
