@@ -53,7 +53,7 @@ const CONFIG = {
       desc: 'Consultoria e planejamento de casa inteligente, com análise das necessidades, definição das soluções e cotação dos dispositivos para o seu projeto.',
       price: 120,
       oldPrice: null,
-      badge: 'Para instalação solicite orçamento',
+      badge: 'Solicite ja seu orçamento',
       img: 'img/casa_int.png'
     },
     {
