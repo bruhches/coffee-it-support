@@ -22,7 +22,7 @@ const CONFIG = {
       price: 189.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1556228578-0d85b1aead18?w=600&h=600&fit=crop'
+      img: 'img/trade.png'
     },
     {
       name: 'Montagem de PC',
