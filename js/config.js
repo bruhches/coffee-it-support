@@ -30,7 +30,7 @@ const CONFIG = {
       price: 129.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1620916566398-30f516051db5?w=600&h=600&fit=crop'
+      img: 'img/montagem.png'
     },
     {
       name: 'Formatação e Backup',
@@ -38,7 +38,7 @@ const CONFIG = {
       price: 79.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1611930022073-2b8b8b803e1f?w=600&h=600&fit=crop'
+      img: 'img/format.png'
     },
     {
       name: 'Configuração de Impressora',
@@ -46,7 +46,7 @@ const CONFIG = {
       price: 49.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1596755389372-cf2f0b0b803e?w=600&h=600&fit=crop'
+      img: 'img/impressora.png'
     },
     {
       name: 'Planejamento de Casa Inteligente',
@@ -54,7 +54,7 @@ const CONFIG = {
       price: 69.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1608248543803-ba4c97a0a0f3?w=600&h=600&fit=crop'
+      img: 'img/casa_int.png'
     },
     {
       name: 'Instalação e configuração de Roteadores',
@@ -62,7 +62,7 @@ const CONFIG = {
       price: 59.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1556228720-0bd4330e5838?w=600&h=600&fit=crop'
+      img: 'img/roteador.png'
     },
     {
       name: 'Consutoria para Empresas',
@@ -70,7 +70,7 @@ const CONFIG = {
       price: 39.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8b8f?w=600&h=600&fit=crop'
+      img: 'img/consult.png'
     },
     {
       name: 'CFTV PF ou PJ',
@@ -78,7 +78,7 @@ const CONFIG = {
       price: 29.90,
       oldPrice: null,
       badge: '',
-      img: 'https://images.unsplash.com/photo-1586495777744-441aa2e8e437?w=600&h=600&fit=crop'
+      img: 'img/cftv.png'
     }
   ],
 
