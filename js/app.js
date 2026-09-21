@@ -68,7 +68,11 @@ function openModal(i) {
   const p = CONFIG.products[i];
   document.getElementById('modalImg').src = p.img;
   document.getElementById('modalTitle').textContent = p.name;
-  document.getElementById('modalPrice').innerHTML = formatCurrency(p.price) + (p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : '');
+  document.getElementById('modalPrice').innerHTML = `
+  ${p.pricePrefix ? `<small class="price-prefix">${p.pricePrefix}</small>` : ''}
+  ${formatCurrency(p.price)}
+  ${p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : ''}
+`;
   document.getElementById('modalDesc').textContent = p.desc;
 
   const msg = encodeURIComponent(`Olá! Tenho interesse no produto: *${p.name}* — ${formatCurrency(p.price)}`);
