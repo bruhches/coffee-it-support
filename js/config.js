@@ -27,57 +27,59 @@ const CONFIG = {
     {
       name: 'Montagem de PC',
       desc: 'Montagem personalizada de computadores, com instalação, organização e configuração dos componentes conforme sua necessidade.',
-      price: 129.90,
+      price: 250,
       oldPrice: null,
-      badge: '',
+      badge: 'Valor apenas da mão de obra',
       img: 'img/montagem.png'
     },
     {
       name: 'Formatação e Backup',
       desc: 'Formatação, instalação e configuração do sistema, com opção de backup para preservar seus arquivos importantes.',
-      price: 79.90,
+      price: 150,
       oldPrice: null,
-      badge: '',
+      badge: 'Com backup simples',
       img: 'img/format.png'
     },
     {
       name: 'Configuração de Impressora',
       desc: 'Instalação e configuração de impressoras locais ou em rede para residências e empresas.',
-      price: 49.90,
+      price: 120,
       oldPrice: null,
       badge: '',
       img: 'img/impressora.png'
     },
     {
       name: 'Planejamento de Casa Inteligente',
-      desc: 'Planejamento e configuração de automações para iluminação, tomadas, sensores, assistentes virtuais e outros dispositivos inteligentes.',
-      price: 69.90,
+      desc: 'Consultoria e planejamento de casa inteligente, com análise das necessidades, definição das soluções e cotação dos dispositivos para o seu projeto.',
+      price: 120,
       oldPrice: null,
-      badge: '',
+      badge: 'Para instalação solicite orçamento',
       img: 'img/casa_int.png'
     },
     {
       name: 'Instalação e configuração de Roteadores',
       desc: 'Instalação, configuração e otimização de redes Wi-Fi para melhorar cobertura, estabilidade, desempenho e segurança.',
-      price: 59.90,
+      price: 80,
       oldPrice: null,
-      badge: '',
+      badge: 'Por aparelho',
       img: 'img/roteador.png'
     },
     {
       name: 'Consutoria para Empresas',
       desc: 'Análise do ambiente de TI e planejamento de soluções em infraestrutura, redes, segurança, cloud e otimização tecnológica.',
-      price: 39.90,
+      price: 200,
+      pricePrefix: 'A partir de',
       oldPrice: null,
-      badge: '',
+      badge: 'Solicite ja seu orçamento',
       img: 'img/consult.png'
     },
     {
       name: 'CFTV PF ou PJ',
       desc: 'Instalação e configuração de sistemas de câmeras para monitoramento e segurança de residências e empresas.',
-      price: 29.90,
+      price: 120,
+      pricePrefix: 'A partir de',
       oldPrice: null,
-      badge: '',
+      badge: 'Por equipamento instalado',
       img: 'img/cftv.png'
     }
   ],
