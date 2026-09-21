@@ -23,7 +23,11 @@ function renderProducts() {
         <p class="desc">${p.desc}</p>
       </div>
       <div class="product-footer">
-        <span class="price">${formatCurrency(p.price)}${p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : ''}</span>
+        <span class="price">
+          ${p.pricePrefix ? `<small class="price-prefix">${p.pricePrefix}</small>` : ''}
+          ${formatCurrency(p.price)}
+          ${p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : ''}
+        </span>
         <button class="add-cart" onclick="event.stopPropagation();addToCart(${i})" aria-label="Adicionar">
           <svg viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
         </button>
