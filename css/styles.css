@@ -299,11 +299,32 @@ ul { list-style:none; }
 }
 .modal-backdrop.active { display:flex; }
 .modal {
-  background:#fff; border-radius:var(--radius);
-  max-width:480px; width:90%; padding:2rem;
+  background:#fff;
+  border-radius:var(--radius);
+  max-width:480px;
+  width:90%;
+  padding:2rem;
   position:relative;
   animation:modalIn .3s ease;
 }
+
+/* Imagem e badge do modal */
+.modal-img-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.modal-img-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal-badge {
+  display: none;
+  z-index: 10;
+}
+
 @keyframes modalIn {
   from { transform:scale(.9); opacity:0; }
   to { transform:scale(1); opacity:1; }
