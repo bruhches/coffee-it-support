@@ -66,18 +66,46 @@ function renderInstagram() {
 /* ----- Modal ----- */
 function openModal(i) {
   const p = CONFIG.products[i];
+
+  // Imagem
   document.getElementById('modalImg').src = p.img;
+  document.getElementById('modalImg').alt = p.name;
+
+  // Badge
+  const modalBadge = document.getElementById('modalBadge');
+
+  if (p.badge) {
+    modalBadge.textContent = p.badge;
+    modalBadge.style.display = 'block';
+  } else {
+    modalBadge.textContent = '';
+    modalBadge.style.display = 'none';
+  }
+
+  // Título
   document.getElementById('modalTitle').textContent = p.name;
+
+  // Preço + prefixo "A partir de"
   document.getElementById('modalPrice').innerHTML = `
-  ${p.pricePrefix ? `<small class="price-prefix">${p.pricePrefix}</small>` : ''}
-  ${formatCurrency(p.price)}
-  ${p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : ''}
-`;
+    ${p.pricePrefix ? `<small class="price-prefix">${p.pricePrefix}</small>` : ''}
+    ${formatCurrency(p.price)}
+    ${p.oldPrice ? `<span class="old">${formatCurrency(p.oldPrice)}</span>` : ''}
+  `;
+
+  // Descrição
   document.getElementById('modalDesc').textContent = p.desc;
 
-  const msg = encodeURIComponent(`Olá! Tenho interesse no produto: *${p.name}* — ${formatCurrency(p.price)}`);
-  document.getElementById('modalWhatsapp').href = `https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`;
+  // Mensagem do WhatsApp
+  const prefix = p.pricePrefix ? `${p.pricePrefix} ` : '';
 
+  const msg = encodeURIComponent(
+    `Olá! Tenho interesse no serviço: *${p.name}* — ${prefix}${formatCurrency(p.price)}`
+  );
+
+  document.getElementById('modalWhatsapp').href =
+    `https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`;
+
+  // Abre o modal
   document.getElementById('productModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
