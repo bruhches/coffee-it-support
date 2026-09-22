@@ -1,6 +1,7 @@
 /**
  * Função serverless (Vercel) que protege o token do Instagram.
  * Configure INSTAGRAM_ACCESS_TOKEN nas Environment Variables do projeto.
+ * 
  */
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
