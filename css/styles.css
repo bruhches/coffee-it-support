@@ -562,6 +562,11 @@ ul { list-style:none; }
 }
 .mobile-menu .close-btn svg { width:32px; height:32px; stroke:var(--text); }
 
+/* Mobile menu - Dark Mode */
+[data-theme="dark"] .mobile-menu {
+  background: rgba(18, 16, 22, .97);
+}
+
 /* ===== MODAL (Product quick view) ===== */
 .modal-backdrop {
   display:none; position:fixed; inset:0; z-index:300;
@@ -570,7 +575,7 @@ ul { list-style:none; }
 }
 .modal-backdrop.active { display:flex; }
 .modal {
-  background:#fff;
+  background: var(--card);
   border-radius:var(--radius);
   max-width:480px;
   width:90%;
@@ -616,10 +621,16 @@ ul { list-style:none; }
   display:flex; flex-direction:column; gap:.5rem;
 }
 .toast {
-  background:#fff; padding:.8rem 1.2rem; border-radius:8px;
+  background: var(--card);
+  color: var(--text);
+  padding:.8rem 1.2rem;
+  border-radius:8px;
   box-shadow:0 4px 16px rgba(0,0,0,.12);
-  font-size:.85rem; font-weight:500;
-  display:flex; align-items:center; gap:.6rem;
+  font-size:.85rem;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
   animation:slideIn .3s ease;
 }
 .toast svg { width:18px; height:18px; fill:#25D366; }
