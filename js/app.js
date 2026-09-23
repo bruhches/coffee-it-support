@@ -52,8 +52,13 @@ function handleProductKeydown(event, index) {
   }
 }
 
+let lastFocusedElement = null;
+
 /* ----- Modal ----- */
 function openModal(i) {
+
+  lastFocusedElement = document.activeElement;
+
   const p = CONFIG.products[i];
 
   // Imagem
@@ -97,12 +102,74 @@ function openModal(i) {
   // Abre o modal
   document.getElementById('productModal').classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  const modal = document.querySelector('#productModal .modal');
+
+if (modal) {
+  setTimeout(() => {
+    modal.focus();
+  }, 50);
+}
+
 }
 
 function closeModal() {
   document.getElementById('productModal').classList.remove('active');
   document.body.style.overflow = '';
+  
+  if (lastFocusedElement) {
+  lastFocusedElement.focus();
+  lastFocusedElement = null;
+  }
+
 }
+
+function trapModalFocus(event) {
+  if (event.key !== 'Tab') return;
+
+  const productModal = document.getElementById('productModal');
+
+  if (!productModal) return;
+
+  const isOpen =
+    productModal.classList.contains('active') ||
+    productModal.classList.contains('open') ||
+    getComputedStyle(productModal).display !== 'none';
+
+  if (!isOpen) return;
+
+  const modal = productModal.querySelector('.modal');
+
+  if (!modal) return;
+
+  const focusableElements = modal.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  );
+
+  if (!focusableElements.length) return;
+
+  const firstElement = focusableElements[0];
+  const lastElement =
+    focusableElements[focusableElements.length - 1];
+
+  if (
+    event.shiftKey &&
+    document.activeElement === firstElement
+  ) {
+    event.preventDefault();
+    lastElement.focus();
+  }
+
+  else if (
+    !event.shiftKey &&
+    document.activeElement === lastElement
+  ) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
+document.addEventListener('keydown', trapModalFocus);
 
 document.getElementById('productModal').addEventListener('click', e => {
   if (e.target === e.currentTarget) closeModal();
