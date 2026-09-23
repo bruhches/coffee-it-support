@@ -3,10 +3,14 @@
 html { scroll-behavior:smooth; }
 body {
   font-family:'Inter',sans-serif;
-  color:#2c2c2c;
-  background:#faf9f7;
+  color: var(--text);
+  background: var(--bg);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+
+  transition:
+    background-color .3s ease,
+    color .3s ease;
 }
 a { text-decoration:none; color:inherit; }
 img { max-width:100%; display:block; }
