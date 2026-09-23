@@ -90,4 +90,6 @@ const CONFIG = {
     }
   ],
 
-  
+  /* Posts do Instagram — cole a URL da imagem e defina likes/comentários */
+ 
+};
