@@ -134,7 +134,11 @@ ul { list-style:none; }
   display:block;
   object-fit:contain;
 }
-.nav-links { display:flex; gap:2rem; }
+.nav-links { 
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
 .nav-links a {
   font-size:.9rem; font-weight:500;
   color:var(--text-light);
