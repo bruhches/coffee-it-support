@@ -729,3 +729,26 @@ ul { list-style:none; }
     gap:.6rem;
   }
 }
+
+/* ===== ACESSIBILIDADE: REDUÇÃO DE MOVIMENTO ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ===== ACESSIBILIDADE: FOCO VISÍVEL ===== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brand-purple);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
