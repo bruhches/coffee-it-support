@@ -13,7 +13,14 @@ function formatCurrency(val) {
 function renderProducts() {
   const grid = document.getElementById('productGrid');
   grid.innerHTML = CONFIG.products.map((p, i) => `
-    <div class="product-card" onclick="openModal(${i})">
+    <div
+      class="product-card"
+      role="button"
+      tabindex="0"
+      aria-label="Ver detalhes do serviço ${p.name}"
+      onclick="openModal(${i})"
+      onkeydown="handleProductKeydown(event, ${i})"
+    >
       <div class="product-img">
         <img src="${p.img}" alt="${p.name}" loading="lazy">
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
@@ -38,6 +45,12 @@ function renderProducts() {
   `).join('');
 }
 
+function handleProductKeydown(event, index) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openModal(index);
+  }
+}
 
 /* ----- Modal ----- */
 function openModal(i) {

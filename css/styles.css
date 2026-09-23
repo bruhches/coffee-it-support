@@ -752,3 +752,8 @@ button:focus-visible {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+.product-card:focus-visible {
+  outline: 3px solid var(--brand-purple);
+  outline-offset: 4px;
+}
