@@ -350,6 +350,25 @@ ul { list-style:none; }
   background:#f0ece6;
   padding:4rem 0;
 }
+
+/* ===== INSTAGRAM - DARK MODE ===== */
+
+[data-theme="dark"] .instagram-section {
+  background: var(--bg-alt);
+}
+
+[data-theme="dark"] .ig-username {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .ig-header a {
+  color: var(--brand-purple);
+}
+
+[data-theme="dark"] .ig-header a:hover {
+  color: var(--text);
+}
+
 .instagram-inner {
   max-width:1200px; margin:auto; padding:0 2rem;
 }
