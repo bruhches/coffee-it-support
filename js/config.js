@@ -68,7 +68,6 @@ const CONFIG = {
       name: 'Consutoria para Empresas',
       desc: 'Análise do ambiente de TI e planejamento de soluções em infraestrutura, redes, segurança, cloud e otimização tecnológica.',
       price: ,
-      pricePrefix: '',
       oldPrice: null,
       badge: 'Solicite ja seu orçamento',
       img: 'img/consult.png'
@@ -77,7 +76,6 @@ const CONFIG = {
       name: 'CFTV PF ou PJ',
       desc: 'Instalação e configuração de sistemas de câmeras para monitoramento e segurança de residências e empresas.',
       price: ,
-      pricePrefix: '',
       oldPrice: null,
       badge: 'Por equipamento instalado',
       img: 'img/cftv.png'
