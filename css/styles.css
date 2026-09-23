@@ -36,7 +36,7 @@ ul { list-style:none; }
 
   /* Textos */
   --text: #2c2c2c;
-  --text-light: #7a7a7a;
+  --text-light: #696969;
 
   /* Outros */
   --shadow: 0 4px 24px rgba(0,0,0,.08);
@@ -414,7 +414,7 @@ ul { list-style:none; }
   margin-top: .25rem;
   font-size: .9rem;
   font-weight: 500;
-  color: #6f6f6f;
+  color: var(--text-light);
 }
 
 .brand-gradient {
@@ -462,7 +462,8 @@ ul { list-style:none; }
   display:flex; align-items:center; justify-content:center; gap:1.2rem;
   opacity:0; transition:opacity .35s;
 }
-.ig-card:hover .ig-overlay { opacity:1; }
+.ig-card:hover .ig-overlay,
+.ig-card:focus-visible .ig-overlay { opacity:1; }
 .ig-stat {
   display:flex; align-items:center; gap:.35rem;
   color:#fff; font-weight:600; font-size:.95rem;
