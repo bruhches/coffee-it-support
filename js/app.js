@@ -140,6 +140,18 @@ function closeMobileMenu() {
    ambiente INSTAGRAM_ACCESS_TOKEN no servidor.
    ============================================================ */
 
+function showInstagramSkeleton() {
+  const grid = document.getElementById('igGrid');
+
+  if (!grid) return;
+
+  grid.innerHTML = Array.from({ length: 6 }, () => `
+    <div class="ig-skeleton">
+      <div class="ig-skeleton-shimmer"></div>
+    </div>
+  `).join('');
+}
+
 async function fetchInstagram() {
   const grid = document.getElementById('igGrid');
 
@@ -175,6 +187,8 @@ async function fetchInstagram() {
 /* ----- Inicialização ----- */
 function init() {
   renderProducts();
+
+  showInstagramSkeleton();
   fetchInstagram();
 }
 
