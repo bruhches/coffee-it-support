@@ -64,7 +64,7 @@ const CONFIG = {
     {
       name: 'Instalação e configuração de Roteadores',
       desc: 'Instalação, configuração e otimização de redes Wi-Fi para melhorar cobertura, estabilidade, desempenho e segurança.',
-      price: 80,
+      price: 100,
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Por aparelho',
