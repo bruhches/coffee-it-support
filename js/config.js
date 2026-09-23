@@ -32,7 +32,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Valor apenas da mão de obra',
-      img: 'img/montagem.png'
+      img: 'img/montagem.webp'
     },
     {
       name: 'Formatação e Backup',
@@ -41,7 +41,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Com backup simples',
-      img: 'img/format.png'
+      img: 'img/format.webp'
     },
     {
       name: 'Configuração de Impressora',
@@ -50,7 +50,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: '',
-      img: 'img/impressora.png'
+      img: 'img/impressora.webp'
     },
     {
       name: 'Planejamento de Casa Inteligente',
@@ -59,7 +59,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Solicite já seu orçamento',
-      img: 'img/casa_int.png'
+      img: 'img/casa_int.webp'
     },
     {
       name: 'Instalação e configuração de Roteadores',
@@ -68,7 +68,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Por aparelho',
-      img: 'img/roteador.png'
+      img: 'img/roteador.webp'
     },
     {
       name: 'Consultoria para Empresas',
@@ -77,7 +77,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Solicite já seu orçamento',
-      img: 'img/consult.png'
+      img: 'img/consult.webp'
     },
     {
       name: 'CFTV PF ou PJ',
@@ -86,7 +86,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Por equipamento instalado',
-      img: 'img/cftv.png'
+      img: 'img/cftv.webp'
     }
   ],
 
