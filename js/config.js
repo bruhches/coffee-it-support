@@ -91,5 +91,12 @@ const CONFIG = {
   ],
 
   /* Posts do Instagram — cole a URL da imagem e defina likes/comentários */
- 
+  instagramPosts: [
+    { img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop', likes: 342, comments: 18 },
+    { img: 'https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=400&h=400&fit=crop', likes: 215, comments: 9 },
+    { img: 'https://images.unsplash.com/photo-1560472355-5f7f3400f189?w=400&h=400&fit=crop', likes: 487, comments: 32 },
+    { img: 'https://images.unsplash.com/photo-1541643601-5a372bce4641?w=400&h=400&fit=crop', likes: 156, comments: 5 },
+    { img: 'https://images.unsplash.com/photo-1571781923784-d0d4e5a37c3e?w=400&h=400&fit=crop', likes: 298, comments: 21 },
+    { img: 'https://images.unsplash.com/photo-1598449356476-1b1d4c5a6b8f?w=400&h=400&fit=crop', likes: 510, comments: 45 }
+  ]
 };
