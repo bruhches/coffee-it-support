@@ -23,7 +23,7 @@ const CONFIG = {
       pricePrefix: 'A partir de',
       oldPrice: null,
       badge: 'Mais valor da peça',
-      img: 'img/trade.png'
+      img: 'img/trade.webp'
     },
     {
       name: 'Montagem de PC',
@@ -58,7 +58,7 @@ const CONFIG = {
       price: 120,
       pricePrefix: 'A partir de',
       oldPrice: null,
-      badge: 'Solicite ja seu orçamento',
+      badge: 'Solicite já seu orçamento',
       img: 'img/casa_int.png'
     },
     {
