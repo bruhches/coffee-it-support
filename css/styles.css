@@ -121,6 +121,12 @@ ul { list-style:none; }
   border-bottom:1px solid rgba(0,0,0,.06);
   padding:0 2rem;
 }
+
+[data-theme="dark"] .navbar {
+  background: rgba(18, 16, 22, .92);
+  border-bottom-color: rgba(255, 255, 255, .08);
+}
+
 .navbar-inner {
   max-width:1200px;
   margin:auto;
@@ -154,6 +160,14 @@ ul { list-style:none; }
   transition:color .3s;
 }
 .nav-links a:hover { color:var(--accent-dark); }
+
+[data-theme="dark"] .nav-links a {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+  color: var(--brand-pink);
+}
 
 .menu-toggle { display:none; background:none; border:none; cursor:pointer; }
 .menu-toggle svg { width:28px; height:28px; stroke:var(--text); }
