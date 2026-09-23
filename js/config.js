@@ -6,7 +6,7 @@
 const CONFIG = {
 
   /* Seu @ do Instagram (sem o @) */
-  instagramUser: 'bruh_chess',
+  instagramUser: 'coffeitsup',
 
   /* Número do WhatsApp com código do país (ex: 5511999999999) */
   whatsappNumber: '5511994172992',
