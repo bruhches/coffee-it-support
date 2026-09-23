@@ -435,6 +435,27 @@ ul { list-style:none; }
   color: #ccc;
   padding: 3rem 2rem;
 }
+
+/* ===== FOOTER - DARK MODE ===== */
+
+[data-theme="dark"] .footer {
+  background: #0d0b10;
+  color: var(--text);
+  border-top-color: rgba(255, 255, 255, .08);
+}
+
+[data-theme="dark"] .footer p {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .footer a {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .footer a:hover {
+  color: var(--brand-pink);
+}
+
 .footer-inner {
   max-width:1200px; margin:auto;
   display:flex; justify-content:space-between; flex-wrap:wrap; gap:2rem;
