@@ -71,12 +71,12 @@ const CONFIG = {
       img: 'img/roteador.png'
     },
     {
-      name: 'Consutoria para Empresas',
+      name: 'Consultoria para Empresas',
       desc: 'Análise do ambiente de TI e planejamento de soluções em infraestrutura, redes, segurança, cloud e otimização tecnológica.',
       price: 200,
       pricePrefix: 'A partir de',
       oldPrice: null,
-      badge: 'Solicite ja seu orçamento',
+      badge: 'Solicite já seu orçamento',
       img: 'img/consult.png'
     },
     {

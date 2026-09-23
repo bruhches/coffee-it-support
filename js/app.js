@@ -103,10 +103,20 @@ document.addEventListener('keydown', e => {
 /* ----- Add-to-Cart (toast) + WhatsApp redirect ----- */
 function addToCart(i) {
   const p = CONFIG.products[i];
-  const msg = encodeURIComponent(`Olá! Quero comprar: *${p.name}* — ${formatCurrency(p.price)}`);
-  showToast(`${p.name} — abrir WhatsApp para comprar`);
+
+  const prefix = p.pricePrefix ? `${p.pricePrefix} ` : '';
+
+  const msg = encodeURIComponent(
+    `Olá! Tenho interesse no serviço: *${p.name}* — ${prefix}${formatCurrency(p.price)}`
+  );
+
+  showToast(`${p.name} — abrindo WhatsApp`);
+
   setTimeout(() => {
-    window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`, '_blank');
+    window.open(
+      `https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`,
+      '_blank'
+    );
   }, 600);
 }
 
@@ -154,6 +164,8 @@ function showInstagramSkeleton() {
 
 async function fetchInstagram() {
   const grid = document.getElementById('igGrid');
+
+  if (!grid) return;
 
   try {
     const res = await fetch('/api/instagram');
