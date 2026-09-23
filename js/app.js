@@ -157,29 +157,70 @@ async function fetchInstagram() {
 
   try {
     const res = await fetch('/api/instagram');
-    if (!res.ok) throw new Error(`Instagram API: HTTP ${res.status}`);
+
+    if (!res.ok) {
+      throw new Error(`Instagram API: HTTP ${res.status}`);
+    }
 
     const data = await res.json();
-    if (!Array.isArray(data.data)) throw new Error('Resposta inválida do feed do Instagram');
+
+    if (!Array.isArray(data.data)) {
+    throw new Error('Resposta inválida do feed do Instagram');
+    }
+
+    if (data.data.length === 0) {
+    throw new Error('Nenhuma publicação encontrada no Instagram');
+    }
 
     grid.innerHTML = data.data.map(p => `
-      <a class="ig-card" href="${p.permalink}" target="_blank" rel="noopener noreferrer">
-        <img src="${p.media_url}" alt="Instagram post" loading="lazy">
+      <a
+        class="ig-card"
+        href="${p.permalink}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="${p.media_url}"
+          alt="Instagram post"
+          loading="lazy"
+        >
+
         <div class="ig-overlay">
           <span class="ig-stat">
-            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+
             ${p.like_count || 0}
           </span>
+
           <span class="ig-stat">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+
             ${p.comments_count || 0}
           </span>
         </div>
       </a>
     `).join('');
+
   } catch (err) {
     console.error('Não foi possível carregar o feed do Instagram:', err);
-    // Mantém os cards estáticos de config.js como fallback.
+
+    grid.innerHTML = `
+      <div class="ig-error">
+        <p>Não foi possível carregar o Instagram no momento.</p>
+
+        <a
+          href="https://instagram.com/coffeitsup"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver perfil no Instagram
+        </a>
+      </div>
+    `;
   }
 }
 
