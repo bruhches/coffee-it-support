@@ -19,7 +19,7 @@ const CONFIG = {
     {
       name: 'Troca de Peças',
       desc: 'Diagnóstico e substituição de componentes para recuperar o desempenho e prolongar a vida útil do seu equipamento.',
-      price: 100,
+      price: null,
       oldPrice: null,
       badge: 'Mais valor da peça',
       img: 'img/trade.png'
@@ -27,7 +27,7 @@ const CONFIG = {
     {
       name: 'Montagem de PC',
       desc: 'Montagem personalizada de computadores, com instalação, organização e configuração dos componentes conforme sua necessidade.',
-      price: 250,
+      price: null,
       oldPrice: null,
       badge: 'Valor apenas da mão de obra',
       img: 'img/montagem.png'
@@ -35,7 +35,7 @@ const CONFIG = {
     {
       name: 'Formatação e Backup',
       desc: 'Formatação, instalação e configuração do sistema, com opção de backup para preservar seus arquivos importantes.',
-      price: 150,
+      price: null,
       oldPrice: null,
       badge: 'Com backup simples',
       img: 'img/format.png'
@@ -43,7 +43,7 @@ const CONFIG = {
     {
       name: 'Configuração de Impressora',
       desc: 'Instalação e configuração de impressoras locais ou em rede para residências e empresas.',
-      price: 120,
+      price: null,
       oldPrice: null,
       badge: '',
       img: 'img/impressora.png'
@@ -51,7 +51,7 @@ const CONFIG = {
     {
       name: 'Planejamento de Casa Inteligente',
       desc: 'Consultoria e planejamento de casa inteligente, com análise das necessidades, definição das soluções e cotação dos dispositivos para o seu projeto.',
-      price: 120,
+      price: null,
       oldPrice: null,
       badge: 'Solicite ja seu orçamento',
       img: 'img/casa_int.png'
@@ -59,7 +59,7 @@ const CONFIG = {
     {
       name: 'Instalação e configuração de Roteadores',
       desc: 'Instalação, configuração e otimização de redes Wi-Fi para melhorar cobertura, estabilidade, desempenho e segurança.',
-      price: 80,
+      price: null,
       oldPrice: null,
       badge: 'Por aparelho',
       img: 'img/roteador.png'
@@ -67,8 +67,8 @@ const CONFIG = {
     {
       name: 'Consutoria para Empresas',
       desc: 'Análise do ambiente de TI e planejamento de soluções em infraestrutura, redes, segurança, cloud e otimização tecnológica.',
-      price: 200,
-      pricePrefix: 'A partir de',
+      price: null,
+      pricePrefix: '',
       oldPrice: null,
       badge: 'Solicite ja seu orçamento',
       img: 'img/consult.png'
@@ -76,8 +76,8 @@ const CONFIG = {
     {
       name: 'CFTV PF ou PJ',
       desc: 'Instalação e configuração de sistemas de câmeras para monitoramento e segurança de residências e empresas.',
-      price: 120,
-      pricePrefix: 'A partir de',
+      price: null,
+      pricePrefix: '',
       oldPrice: null,
       badge: 'Por equipamento instalado',
       img: 'img/cftv.png'
