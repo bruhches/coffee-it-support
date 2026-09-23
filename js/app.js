@@ -214,13 +214,88 @@ function showToast(msg) {
 }
 
 /* ----- Mobile menu ----- */
+let lastMobileMenuFocus = null;
+
 function openMobileMenu() {
-  document.querySelector('.mobile-menu').classList.add('active');
+  const menu = document.getElementById('mobileMenu');
+  const button = document.getElementById('mobileMenuButton');
+
+  if (!menu || !button) return;
+
+  lastMobileMenuFocus = document.activeElement;
+
+  menu.classList.add('active');
+
+  menu.setAttribute('aria-hidden', 'false');
+  button.setAttribute('aria-expanded', 'true');
+
+  const closeButton = menu.querySelector('.close-btn');
+
+  if (closeButton) {
+    closeButton.focus();
+  }
 }
 
 function closeMobileMenu() {
-  document.querySelector('.mobile-menu').classList.remove('active');
+  const menu = document.getElementById('mobileMenu');
+  const button = document.getElementById('mobileMenuButton');
+
+  if (!menu || !button) return;
+
+  menu.classList.remove('active');
+
+  menu.setAttribute('aria-hidden', 'true');
+  button.setAttribute('aria-expanded', 'false');
+
+  if (lastMobileMenuFocus) {
+    lastMobileMenuFocus.focus();
+    lastMobileMenuFocus = null;
+  }
 }
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+
+  const menu = document.getElementById('mobileMenu');
+
+  if (menu && menu.classList.contains('active')) {
+    closeMobileMenu();
+  }
+});
+
+function trapMobileMenuFocus(event) {
+  if (event.key !== 'Tab') return;
+
+  const menu = document.getElementById('mobileMenu');
+
+  if (!menu || !menu.classList.contains('active')) return;
+
+  const focusableElements = menu.querySelectorAll(
+    'a[href], button:not([disabled])'
+  );
+
+  if (!focusableElements.length) return;
+
+  const firstElement = focusableElements[0];
+  const lastElement =
+    focusableElements[focusableElements.length - 1];
+
+  if (
+    event.shiftKey &&
+    document.activeElement === firstElement
+  ) {
+    event.preventDefault();
+    lastElement.focus();
+  } else if (
+    !event.shiftKey &&
+    document.activeElement === lastElement
+  ) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
+document.addEventListener('keydown', trapMobileMenuFocus);
 
 /* ============================================================
    INSTAGRAM LIVE FEED — seguro

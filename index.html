@@ -70,15 +70,32 @@
     <span class="theme-icon" aria-hidden="true">☾</span>
     </button>
     </div>
-    <button class="menu-toggle" onclick="openMobileMenu()" aria-label="Menu">
+    <button
+      class="menu-toggle"
+      id="mobileMenuButton"
+      type="button"
+      onclick="openMobileMenu()"
+      aria-label="Abrir menu de navegação"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </nav>
 
 <!-- ===== MOBILE MENU ===== -->
-<div class="mobile-menu">
-  <button class="close-btn" onclick="closeMobileMenu()">
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+  aria-hidden="true"
+>
+  <button
+    class="close-btn"
+    type="button"
+    onclick="closeMobileMenu()"
+    aria-label="Fechar menu de navegação"
+  >
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
   <a href="#produtos" onclick="closeMobileMenu()">Serviços</a>
