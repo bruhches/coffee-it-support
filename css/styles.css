@@ -93,9 +93,14 @@ ul { list-style:none; }
 }
 
 .theme-toggle:hover {
+  background: var(--brand-gradient);
+  color: #fff;
+  border-color: transparent;
+
   transform: translateY(-2px);
-  border-color: var(--brand-purple);
-  box-shadow: 0 4px 14px rgba(139, 43, 226, .20);
+
+  box-shadow:
+    0 6px 18px rgba(139, 43, 226, .30);
 }
 
 .theme-toggle:focus-visible {

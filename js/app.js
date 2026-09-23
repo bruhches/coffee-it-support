@@ -236,11 +236,54 @@ async function fetchInstagram() {
   }
 }
 
+function initTheme() {
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle?.querySelector('.theme-icon');
+
+  if (!themeToggle || !themeIcon) return;
+
+  const savedTheme = localStorage.getItem('theme');
+
+  const systemPrefersDark = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+
+  const initialTheme =
+    savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    const isDark = theme === 'dark';
+
+    themeIcon.textContent = isDark ? '☀' : '☾';
+
+    themeToggle.setAttribute(
+      'aria-label',
+      isDark ? 'Ativar modo claro' : 'Ativar modo escuro'
+    );
+  }
+
+  applyTheme(initialTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme =
+      document.documentElement.getAttribute('data-theme');
+
+    const newTheme =
+      currentTheme === 'dark' ? 'light' : 'dark';
+
+    applyTheme(newTheme);
+
+    localStorage.setItem('theme', newTheme);
+  });
+}
 
 /* ----- Inicialização ----- */
 function init() {
-  renderProducts();
+  initTheme();
 
+  renderProducts();
   showInstagramSkeleton();
   fetchInstagram();
 }
